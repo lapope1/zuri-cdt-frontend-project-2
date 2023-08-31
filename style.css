@@ -14,7 +14,7 @@ h6{
     color: gray;
     padding-bottom: 5px;
 }
-/*form background*/
+
 .form-background{
     background-color: hsl(0, 0%, 90%);
     width:520px;
@@ -24,7 +24,7 @@ h6{
     flex-direction: column;
     margin-top:50px;
 }
-/*card heading*/
+
 .card-heading{
     background-color: brown;
     width:400px;
