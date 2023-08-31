@@ -1,5 +1,5 @@
 @import url('https://www.dafontfree.io/download/afogand/');
-
+/*title*/
 *{
     box-sizing: border-box;
     padding: 0;
@@ -14,6 +14,7 @@ h6{
     color: gray;
     padding-bottom: 5px;
 }
+/*form background*/
 .form-background{
     background-color: hsl(0, 0%, 90%);
     width:520px;
@@ -23,6 +24,7 @@ h6{
     flex-direction: column;
     margin-top:50px;
 }
+/*card heading*/
 .card-heading{
     background-color: brown;
     width:400px;
@@ -38,6 +40,8 @@ h6{
     z-index: 1;
     top:70px;
 }
+
+/*input*/
 .input-background{
     background-color: white;
     display: flex;
@@ -54,6 +58,7 @@ h6{
     padding-top: 120px;
     padding-bottom: 30px;
 }
+
 .card-number{
     display: flex;
     flex-direction: column;
