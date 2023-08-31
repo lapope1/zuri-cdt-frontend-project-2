@@ -17,8 +17,8 @@
 }
 
 .container{
-    min-height: 100vh;
-    background: #eee;
+    min-height: 200vh;
+    background: #a91616;
     display: flex;
     align-items: center;
     justify-content: center;
