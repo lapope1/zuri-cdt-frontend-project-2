@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- custom css file link  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
-
+    <title>Card validation</title>
 </head>
 <body>
     <div class="container">
@@ -48,16 +45,17 @@
         <form action="">
             <div class="inputBox">
                 <span>card number</span>
-                <input type="text" maxlength="16" class="card-number-input">
+                <input type="text" maxlength="16" class="card-number-input" required>
             </div>
             <div class="inputBox">
                 <span>card holder</span>
-                <input type="text" class="card-holder-input">
+                <input type="text" class="card-holder-input" required>
+               
             </div>
             <div class="flexbox">
                 <div class="inputBox">
                     <span>expiration mm</span>
-                    <select name="" id="" class="month-input">
+                    <select name="" id="" class="month-input" required>
                         <option value="month" selected disabled>month</option>
                         <option value="01">01</option>
                         <option value="02">02</option>
@@ -75,7 +73,7 @@
                 </div>
                 <div class="inputBox">
                     <span>expiration yy</span>
-                    <select name="" id="" class="year-input">
+                    <select name="" id="" class="year-input" required>
                         <option value="year" selected disabled>year</option>
                         <option value="2021">2021</option>
                         <option value="2022">2022</option>
@@ -102,7 +100,7 @@
                 </div>
                 <div class="inputBox">
                     <span>cvv</span>
-                    <input type="text" maxlength="4" class="cvv-input">
+                    <input type="text" maxlength="4" class="cvv-input" required>
                 </div>
             </div>
             <input type="submit" value="submit" class="submit-btn">
