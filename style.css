@@ -18,6 +18,7 @@
     padding-bottom: 60px;
 }
 
+/*container form*/
 .container form{
     background: #fff;
     border-radius: 5px;
@@ -69,9 +70,10 @@
 }
 
 
+/*submit button*/
 .container form .submit-btn{
     width: 100%;
-    background:linear-gradient(45deg, blueviolet, deeppink);
+    background:linear-gradient(45deg, rgb(43, 226, 186), rgb(145, 172, 47));
     margin-top: 20px;
     padding: 10px;
     font-size: 20px;
@@ -138,12 +140,13 @@
     color:#fff;
 }
 
+/*card container back*/
 .container .card-container .back{
     position: absolute;
     top:0; left: 0;
     height: 100%;
     width: 100%;
-    background:linear-gradient(45deg, blueviolet, deeppink);
+    background:linear-gradient(45deg, rgb(43, 226, 186), rgb(145, 172, 47));
     border-radius: 5px;
     padding: 20px 0;
     text-align: right;
