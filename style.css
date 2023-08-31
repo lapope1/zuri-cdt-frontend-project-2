@@ -9,7 +9,7 @@
 }
 /*container*/
 .container{
-    min-height: 100vh;
+    min-height: 200vh;
     background: #bae99ed4;
     display: flex;
     align-items: center;
@@ -83,11 +83,13 @@
     transition: .2s linear;
 }
 
+/*submit button hover*/
 .container form .submit-btn:hover{
     letter-spacing: 2px;
     opacity: .8;
 }
 
+/*card-container*/
 .container .card-container{
     margin-bottom: -150px;
     position: relative;
@@ -95,7 +97,7 @@
     width: 400px;
 }
 
-/*card container*/
+/*card container front*/
 .container .card-container .front{
     position: absolute;
     height: 100%;
