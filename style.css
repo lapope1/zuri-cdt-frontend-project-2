@@ -66,6 +66,35 @@
     cursor: pointer;
     transition: .2s linear;
 }
+/*--------------------
+Form
+--------------------*/
+.form 
+
+    fieldset {
+      border: none;
+      padding: 0;
+      padding: 10px 0;
+      position: relative;
+      clear: both;
+  
+      &.fieldset-expiration {
+        float: left;
+        width: 60%;
+  
+        & .select {
+          width: 84px;
+          margin-right: 12px;
+          float: left;
+        }
+      }
+  
+      &.fieldset-ccv {
+        clear: none;
+        float: right;
+        width: 86px;
+      }
+    }
 
 .container form .submit-btn:hover{
     letter-spacing: 2px;
