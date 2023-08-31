@@ -1,34 +1,60 @@
-<script>
+// Get DOM elements
+const cardNumberInput = document.querySelector('.card-number-input');
+const cardHolderInput = document.querySelector('.card-holder-input');
+const monthInput = document.querySelector('.month-input');
+const yearInput = document.querySelector('.year-input');
+const cvvInput = document.querySelector('.cvv-input');
+const cardNumberBox = document.querySelector('.card-number-box');
+const cardHolderName = document.querySelector('.card-holder-name');
+const expMonth = document.querySelector('.exp-month');
+const expYear = document.querySelector('.exp-year');
+const cvvBox = document.querySelector('.cvv-box');
+const cardContainer = document.querySelector('.card-container');
 
-document.querySelector('.card-number-input').oninput = () =>{
-    document.querySelector('.card-number-box').innerText = document.querySelector('.card-number-input').value;
-}
+// Update card number box as user types
+cardNumberInput.addEventListener('input', () => {
+  cardNumberBox.textContent = cardNumberInput.value.padEnd(16, '#');
+});
 
-document.querySelector('.card-holder-input').oninput = () =>{
-    document.querySelector('.card-holder-name').innerText = document.querySelector('.card-holder-input').value;
-}
+// Update cardholder name as user types
+cardHolderInput.addEventListener('input', () => {
+  cardHolderName.textContent = cardHolderInput.value || 'full name';
+});
 
-document.querySelector('.month-input').oninput = () =>{
-    document.querySelector('.exp-month').innerText = document.querySelector('.month-input').value;
-}
+// Update expiration date as user selects options
+monthInput.addEventListener('change', () => {
+  expMonth.textContent = monthInput.value || 'mm';
+});
+yearInput.addEventListener('change', () => {
+  expYear.textContent = yearInput.value.slice(-2) || 'yy';
+});
 
-document.querySelector('.year-input').oninput = () =>{
-    document.querySelector('.exp-year').innerText = document.querySelector('.year-input').value;
-}
+// Update CVV display as user types
+cvvInput.addEventListener('input', () => {
+  cvvBox.textContent = cvvInput.value;
+});
 
-document.querySelector('.cvv-input').onmouseenter = () =>{
-    document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
-    document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
-}
+// Flip card when focused on CVV input
+cvvInput.addEventListener('focus', () => {
+  cardContainer.classList.add('flip');
+});
 
-document.querySelector('.cvv-input').onmouseleave = () =>{
-    document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
-    document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
-}
+cvvInput.addEventListener('blur', () => {
+  cardContainer.classList.remove('flip');
+});
 
-document.querySelector('.cvv-input').oninput = () =>{
-    document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
-}
-
-</script>
-
+// Prevent submission if any input is empty
+document.querySelector('form').addEventListener('submit', (event) => {
+  if (
+    cardNumberInput.value === '' ||
+    cardHolderInput.value === '' ||
+    monthInput.value === 'month' ||
+    yearInput.value === 'year' ||
+    cvvInput.value === ''
+  ) {
+    event.preventDefault();
+    alert('Please fill in all required fields.');
+  } else {
+    alert('Your payment was successful.');
+  }
+});
