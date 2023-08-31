@@ -46,6 +46,23 @@
     color:#444;
 }
 
+/*flexbox*/
+.container form .flexbox{
+    display: flex;
+    gap:15px;
+}
+.container form .flexbox{
+    display: flex;
+    gap:15px;
+}
+.container form .flexbox{
+    display: flex;
+    gap:15px;
+}
+.container form .flexbox{
+    display: flex;
+    gap:15px;
+}
 .container form .flexbox{
     display: flex;
     gap:15px;
@@ -66,35 +83,6 @@
     cursor: pointer;
     transition: .2s linear;
 }
-/*--------------------
-Form
---------------------*/
-.form 
-
-    fieldset {
-      border: none;
-      padding: 0;
-      padding: 10px 0;
-      position: relative;
-      clear: both;
-  
-      &.fieldset-expiration {
-        float: left;
-        width: 60%;
-  
-        & .select {
-          width: 84px;
-          margin-right: 12px;
-          float: left;
-        }
-      }
-  
-      &.fieldset-ccv {
-        clear: none;
-        float: right;
-        width: 86px;
-      }
-    }
 
 .container form .submit-btn:hover{
     letter-spacing: 2px;
@@ -108,12 +96,13 @@ Form
     width: 400px;
 }
 
+/*card container*/
 .container .card-container .front{
     position: absolute;
     height: 100%;
     width: 100%;
     top: 0; left: 0;
-    background:linear-gradient(45deg, blueviolet, deeppink);
+    background:linear-gradient(45deg, rgb(43, 226, 186), rgb(145, 172, 47));
     border-radius: 5px;
     backface-visibility: hidden;
     box-shadow: 0 15px 25px rgba(0,0,0,.2);
