@@ -7,6 +7,7 @@
     color: #296bc2;
 }
 
+/* font */
 *{
     font-family: 'afogand', sans-serif;
     margin:0; padding:0;
@@ -16,6 +17,7 @@
     text-transform: uppercase;
 }
 
+/* Common */
 .container{
     min-height: 200vh;
     background: #a91616;
