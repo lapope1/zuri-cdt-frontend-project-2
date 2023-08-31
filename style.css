@@ -1,201 +1,172 @@
 @import url('https://www.dafontfree.io/download/afogand/');
 /*title*/
+
 *{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: uppercase;
 }
-body{
-    background-color: rgb(255, 255, 255);
-    font-family: cursive;
+
+.container{
+    min-height: 100vh;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
 }
-h6{
-    font-family:cursive;
-    color: rgb(255, 255, 255);
+
+.container form{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+    width: 600px;
+    padding-top: 160px;
+}
+
+.container form .inputBox{
+    margin-top: 20px;
+}
+
+.container form .inputBox span{
+    display: block;
+    color:#999;
     padding-bottom: 5px;
 }
 
-.form-background{
-    background-color: hsl(0, 63%, 57%);
-    width:520px;
-    margin: auto;
-    height:fit-content;
-    display: flex;
-    flex-direction: column;
-    margin-top:50px;
+.container form .inputBox input,
+.container form .inputBox select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,.3);
+    color:#444;
 }
 
-.card-heading{
-    background-color: brown;
-    width:400px;
-    margin: auto;
+.container form .flexbox{
     display: flex;
-    flex-direction: column;
-    padding:5px 10px;
-    border-radius: 15px;
-    gap: 30px;
-    justify-content: space-between;
+    gap:15px;
+}
+
+.container form .flexbox .inputBox{
+    flex:1 1 150px;
+}
+
+.container form .submit-btn{
+    width: 100%;
+    background:linear-gradient(45deg, blueviolet, deeppink);
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color:#fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.container form .submit-btn:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.container .card-container{
+    margin-bottom: -150px;
     position: relative;
-    height: 200px;
-    z-index: 1;
-    top:70px;
+    height: 250px;
+    width: 400px;
 }
 
-/*input*/
-.input-background{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    padding-right:35px;
-    padding-left: 35px;
-    gap: 30px;
-    width:fit-content;
-    margin: auto;
-    border: 1px solid white;
-    border-radius:15px;
-    position:relative;
-    bottom: 30px;
-    padding-top: 120px;
-    padding-bottom: 30px;
+.container .card-container .front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0;
+    background:linear-gradient(45deg, blueviolet, deeppink);
+    border-radius: 5px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    padding:20px;
+    transform:perspective(1000px) rotateY(0deg);
+    transition:transform .4s ease-out;
 }
 
-.card-number{
+.container .card-container .front .image{
     display: flex;
-    flex-direction: column;
-}
-.card-number_box{
-    display: flex;
-}
-.card-number_box input{
-    width: 100px;
-    height: 30px;
-}
-.card-holder{
-    display: flex;
-    flex-direction: column;
-}
-.card-holder input{
-    width: 100px;
-    height: 30px;
-}
-.expiration{
-    display: flex;
-    flex-direction: column;
-}
-
-.expiration-box{
-    display: flex;
+    align-items:center;
     justify-content: space-between;
+    padding-top: 10px;
 }
-.expiration input{
-    width: 100px;
-    height: 30px;
+
+.container .card-container .front .image img{
+    height: 50px;
 }
-.cvv{
+
+.container .card-container .front .card-number-box{
+    padding:30px 0;
+    font-size: 22px;
+    color:#fff;
+}
+
+.container .card-container .front .flexbox{
     display: flex;
-    flex-direction: column;
-    position: relative;
-    bottom:20px;
-    right:30px;
 }
-.mobile-view{
-    display: none;
+
+.container .card-container .front .flexbox .box:nth-child(1){
+    margin-right: auto;
 }
+
+.container .card-container .front .flexbox .box{
+    font-size: 15px;
+    color:#fff;
 }
-@media only screen and (max-width:428px){
-    .desktop-view{
-        display: none;
-    }
-    *{
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-    }
-    body{
-        background-color: rgb(83, 78, 78);
-    }
-    h6{
-        font-family:cursive;
-        color: gray;
-        padding-bottom: 5px;
-    }
-    .form-background{
-        background-color: hsl(0, 0%, 90%);
-        width:fit-content;
-        margin: auto;
-        height:fit-content;
-        display: flex;
-        flex-direction: column;
-        margin-top:50px;
-    }
-    .card-heading{
-        background-color: brown;
-        width:300px;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        padding:5px 10px;
-        border-radius: 15px;
-        gap: 30px;
-        justify-content: space-between;
-        position: relative;
-        height: 200px;
-        z-index: 1;
-        top:70px;
-    }
-    .input-background{
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        padding-right:15px;
-        padding-left: 15px;
-        gap: 30px;
-        width:fit-content;
-        margin: auto;
-        border: 1px solid white;
-        border-radius:15px;
-        position:relative;
-        bottom: 30px;
-        padding-top: 120px;
-        padding-bottom: 30px;
-    }
-    .card-number{
-        display: flex;
-        flex-direction: column;
-    }
-    .card-number_box{
-        display: flex;
-    }
-    .card-number_box input{
-        width: 80px;
-        height: 30px;
-    }
-    .card-holder{
-        display: flex;
-        flex-direction: column;
-    }
-    .card-holder input{
-        width: 80px;
-        height: 30px;
-    }
-    .expiration{
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .expiration-box{
-        display: flex;
-        justify-content: space-between;
-    }
-    .expiration input{
-        width: 80px;
-        height: 30px;
-    }
-    .cvv{
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        bottom:20px;
-        right:30px;
-    }
+
+.container .card-container .back{
+    position: absolute;
+    top:0; left: 0;
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(45deg, blueviolet, deeppink);
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    transform:perspective(1000px) rotateY(180deg);
+    transition:transform .4s ease-out;
+}
+
+.container .card-container .back .stripe{
+    background: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.container .card-container .back .box{
+    padding: 0 20px;
+}
+
+.container .card-container .back .box span{
+    color:#fff;
+    font-size: 15px;
+}
+
+.container .card-container .back .box .cvv-box{
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color:#333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container .card-container .back .box img{
+    margin-top: 30px;
+    height: 30px;
 }
