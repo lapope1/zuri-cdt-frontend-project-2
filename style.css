@@ -137,6 +137,7 @@
     margin-right: auto;
 }
 
+/*card container flexbox*/
 .container .card-container .front .flexbox .box{
     font-size: 15px;
     color:#fff;
